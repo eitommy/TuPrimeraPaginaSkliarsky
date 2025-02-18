@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Agregar Entregable</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Esto renderiza el formulario, incluyendo el campo de fecha -->
+    <button type="submit">Agregar Entregable</button>
+</form>
+{% endblock %}

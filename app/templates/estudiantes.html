@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Agregar Estudiante</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label for="id_nombre">Nombre:</label>
+    {{ form.nombre }}<br><br>
+
+    <label for="id_apellido">Apellido:</label>
+    {{ form.apellido }}<br><br>
+
+    <label for="id_email">Email:</label>
+    {{ form.email }}<br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
